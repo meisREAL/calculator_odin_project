@@ -38,3 +38,21 @@ function operate() {
             console.log('WHOOPS');
     }
 }
+let displayText = [];
+
+function populateDisplay() {
+
+
+    // const pressedButton = this.querySelector('.button');
+    const display = document.querySelector('.display');
+    // display.textContent = this.textContent
+    displayText.push(this.textContent);
+    displayText.join('');
+    display.textContent = displayText.join('');
+
+    console.log(displayText)
+}
+const btns = document.querySelectorAll('.button');
+for (i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', populateDisplay);
+}
