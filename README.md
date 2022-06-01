@@ -14,4 +14,7 @@ Logic:
         []multiply
         []divide
     []function 'operate' takes an operator and 2 numbers, calls math operation function on the numbers
+
+
+
     
