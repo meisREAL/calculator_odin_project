@@ -4,8 +4,8 @@ Simple calculator to finis odin's project foundations
 Tasks:
 Presentation:
     []html:
-        []buttons for digits and functions
-        []display
+        [V]buttons for digits and functions
+        [V]display
         []clear button
 Logic:
     []basic math operations:
@@ -17,4 +17,3 @@ Logic:
 
 
 
-    
