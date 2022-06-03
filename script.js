@@ -1,3 +1,9 @@
+let displayText = [];
+let operand = '';
+let numA;
+let numB;
+
+
 let calculator = {
     add: function (a, b) {
         console.log(a + b);
@@ -38,20 +44,32 @@ function operate() {
             console.log('WHOOPS');
     }
 }
-let displayText = [];
 
 function populateDisplay() {
 
-
-    // const pressedButton = this.querySelector('.button');
     const display = document.querySelector('.display');
-    // display.textContent = this.textContent
     displayText.push(this.textContent);
-    displayText.join('');
     display.textContent = displayText.join('');
 
+
     console.log(displayText)
+
 }
+
+function cutArray() {
+    for (i = 0; i < displayText.length; i++) {
+        if (displayText[i] == '+' || displayText[i] == '-' || displayText[i] == '*' || displayText[i] == '/') {
+            operand = displayText[i]
+            numA = displayText.splice(0, i).join('');
+            numB = displayText.slice(1).join('')
+        }
+    }
+    console.log(numA);
+    console.log(operand);
+    console.log(numB);
+
+}
+
 const btns = document.querySelectorAll('.button');
 for (i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', populateDisplay);
